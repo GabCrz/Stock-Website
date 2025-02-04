@@ -1,13 +1,43 @@
 
 
-/**=====NAVBAR===== */
-navbar,li,a { 
-text-decoration: none;
-list-style-type: none;
-}
-/**======BODY====== */
 
+.title {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+   padding: 1.5rm; 
 
-p1 { 
-    color: red;  /*test */
 }
+#title-info {
+    /* green color until I figure out overall website design */
+    color: green;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+/**======STOCK INFO BOXES====== */
+#stockbox { 
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto; 
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: 60%; 
+    height: 250px;
+    border-radius: 20px;
+    border: 4px solid black;
+    padding: 10px;
+    /* background-color: #bfbfbf; */
+    /* box-shadow: auto; */
+}
+.stock-img { 
+    width: 300px;
+    height: 100%;
+    object-fit: contain;
+
+    margin-right: 20px;
+}
+
+   
