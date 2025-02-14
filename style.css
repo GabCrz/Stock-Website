@@ -78,16 +78,17 @@ a:active { text-decoration: none; } */
  /*TODO: fixing the padding of the box and making it even */
 .stock-info-box {
     width: 250px;
-    height: 200px;
-    padding-bottom: 10px;
-    padding: auto;
+    height: 250px;
     border: 2px solid black;
     border-radius: 10px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     margin-left: auto;
 
     border: 1px solid gray;
     background-color: #f9f9f9;
     border-radius: 5px;
 }
-
+.stock-info-box:hover { 
+    /* transform: scale(1.02);
+    box-shadow: 5px 10px #8d8c8c; */
+}
