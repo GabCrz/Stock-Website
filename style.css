@@ -1,94 +1,125 @@
 
 /**=====Overall=====*/
 * {
-    font-family: "Roboto", serif;
+    font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-variation-settings: "wdth" 100;
+    box-sizing: border-box;
 }
-body { 
-    max-width: 1920px;  /* Adjust the width as needed */
-    margin: 0 auto;  /* Centers the container horizontally */
-    padding: 10px; /* Adds some space inside */
 
+body { 
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 10px;
+    background: linear-gradient(to bottom, #1a1a2e, #16213e, #0f3460); 
+    color: white;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
 }
+
+
 /**=====Title=====*/
 .title {
     display: flex; 
     justify-content: center;
     align-items: center;
-   padding: 1.5rm; 
-    font-family: roboto
+    padding: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 2.8rem; 
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to right, #00c6ff, #0072ff); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
 }
-#title-info {
-    /* green color until I figure out overall website design */
-    color: green;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
+
+
+.title::after {
+    content: "";
+    position: absolute;
+    width: 40%; /*Line size */
+    height: 4px;
+    background: #00c6ff; 
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
 }
+
 
 /**======STOCK INFO BOXES====== */
 #stockbox { 
-
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin: auto; 
     margin-top: 5rem;
     margin-bottom: 5rem;
-    width: 50%; 
+    width: 60%;
     height: 250px;
     border-radius: 20px;
-    background-color: #e8e8e8;
-    border: 4px solid #FFFFFF;
-    padding: 10px;
-}
-#stockbox:hover {
-    transform: scale(1.02);
-    box-shadow: 5px 10px #8d8c8c;
+    background: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
     
 }
+
+#stockbox:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 10px 20px #00c6ff;
+}
+
 .stock-img { 
-    width: 300px;
+    width: 200px;
     height: 100%;
     object-fit: contain;
     margin-right: 20px;
 }
 
-
 /**=====Company Name & Stock Name=====*/ 
-/* a:link { text-decoration: none; }
-a:visited { text-decoration: none; }
-a:hover { text-decoration: none; }
-a:active { text-decoration: none; } */
-
-.Comp-Name{ 
-    color:black;
-    size: 16px;
+.Comp-Name { 
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
 }
-/* 
-.info-box{
-    display: flex; 
-    justify-content: right;
-    width: 20%; 
 
-} */
- /*TODO: fixing the padding of the box and making it even */
+/* Stock Info Box */
 .stock-info-box {
-    width: 250px;
-    height: 250px;
-    border: 2px solid black;
+    width: 500px;
+    height: 230px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
-    /* margin-top: 10px; */
+    background: rgba(255, 255, 255, 0.2);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: center;
     margin-left: auto;
-
-    border: 1px solid gray;
-    background-color: #f9f9f9;
-    border-radius: 5px;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
 .stock-info-box:hover { 
-    /* transform: scale(1.02);
-    box-shadow: 5px 10px #8d8c8c; */
+    transform: scale(1.02);
+    box-shadow: 5px 10px 15px rgba(51, 51, 51, 0.4);
+}
+
+.stock-info-box p {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
 }
