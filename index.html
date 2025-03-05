@@ -19,7 +19,7 @@
     <div id="stockbox">
         <img src="img/apple.png" class="stock-img">
         <h2 class="Comp-Name">Apple Inc. </h2>
-        <div class="stock-info-box">
+        <div class="stock-info-box" id="stockDataApple">
             <p>stock-box</p>    
         </div>
         </span>
@@ -28,7 +28,7 @@
     <div id="stockbox">
        <img src="img/microsoft.png" class="stock-img">
        <h2 class="Comp-Name">Microsoft</h2>
-       <div class="stock-info-box">
+       <div class="stock-info-box" id="stockDataMicrosoft">
         <p>stock-box</p>
     </div>
     </div>
@@ -36,7 +36,7 @@
     <div id="stockbox">
         <img src="img/Google.png" class="stock-img">
         <h2 class="Comp-Name">Google </h2> 
-        <div class="stock-info-box">
+        <div class="stock-info-box" id="stockDataGoogle">
             <p>stock-box</p>
         </div>
     </div>
@@ -44,13 +44,19 @@
     <div id="stockbox">
         <img src="img/nvidia.png" class="stock-img">
         <h2 class="Comp-Name">Nvidia </h2>
-        <div class="stock-info-box">
+        <div class="stock-info-box" id="stockDataNvidia">
             <p>stock-box</p>
         </div>
     </div>
 
-
-
-
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetchStockData('AAPL', 'stockDataApple');
+            fetchStockData('MSFT', 'stockDataMicrosoft');
+            fetchStockData('GOOGL', 'stockDataGoogle');
+            fetchStockData('NVDA', 'stockDataNvidia');
+        });
+    </script>
 </body>
 </html>
